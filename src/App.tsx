@@ -160,7 +160,10 @@ export default function App() {
             </h1>
           </div>
 
-                    <div style={{ opacity: introPhase >= 3 ? 1 : 0, transform: introPhase >= 3 ? "translateY(0)" : "translateY(10px)", transition: "all 0.7s 0.2s", marginTop: "1rem" }}>
+                    <div style={{ opacity: introPhase >= 3 ? 1 : 0, transition: "opacity 0.6s 0.1s", marginTop: "1.2rem" }}>
+              <Divider width="w-14" />
+            </div>
+          <div style={{ opacity: introPhase >= 3 ? 1 : 0, transform: introPhase >= 3 ? "translateY(0)" : "translateY(10px)", transition: "all 0.7s 0.2s", marginTop: "1rem" }}>
             <p style={{ fontSize: "0.72rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "#D4A853", fontWeight: 600 }}>
               Preserving Wisdom. Inspiring Generations.
             </p>
