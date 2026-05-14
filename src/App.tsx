@@ -160,13 +160,7 @@ export default function App() {
             </h1>
           </div>
 
-          {/* Divider */}
-          <div style={{ opacity: introPhase >= 3 ? 1 : 0, transition: "opacity 0.6s 0.1s", marginTop: "1.2rem" }}>
-            <Divider width="w-14" />
-          </div>
-
-          {/* Tagline */}
-          <div style={{ opacity: introPhase >= 3 ? 1 : 0, transform: introPhase >= 3 ? "translateY(0)" : "translateY(10px)", transition: "all 0.7s 0.2s", marginTop: "1rem" }}>
+                    <div style={{ opacity: introPhase >= 3 ? 1 : 0, transform: introPhase >= 3 ? "translateY(0)" : "translateY(10px)", transition: "all 0.7s 0.2s", marginTop: "1rem" }}>
             <p style={{ fontSize: "0.72rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "#D4A853", fontWeight: 600 }}>
               Preserving Wisdom. Inspiring Generations.
             </p>
@@ -242,7 +236,6 @@ export default function App() {
               NAV<span style={{ color: "#D4A853", fontWeight: 500 }}>Ā</span>TM<span style={{ color: "#D4A853", fontWeight: 500 }}>Ā</span>
             </h1>
           </Reveal>
-          <Reveal delay={0.25}><div className="mt-4"><Divider width="w-14" /></div></Reveal>
           <Reveal delay={0.35}>
             <p className="mt-5" style={{ fontSize: "0.72rem", letterSpacing: "0.35em", textTransform: "uppercase" as const, color: "#D4A853", fontWeight: 600 }}>
               Preserving Wisdom. Inspiring Generations.
@@ -336,7 +329,6 @@ export default function App() {
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <Divider width="w-10" />
             <p className="mt-4" style={{ color: "#F0D48A", fontSize: "0.78rem", fontWeight: 600, letterSpacing: "0.06em", lineHeight: 1.7 }}>
               Srimad Uttaradimathadhisha Paramapoojya<br />
               <span style={{ fontSize: "0.85rem", letterSpacing: "0.02em" }}>1008 Sri Sri Satyatma Theertha Swamiji</span>
