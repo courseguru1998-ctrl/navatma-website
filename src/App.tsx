@@ -201,7 +201,7 @@ export default function App() {
         padding: scrolled ? "0.65rem 1.5rem" : "1rem 1.5rem",
         transitionDuration: "0.4s",
       }}>
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
           <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="border-none bg-transparent cursor-pointer flex items-center gap-2.5">
             <Lotus size={26} />
             <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.25rem", fontWeight: 600, color: "#D4A853", letterSpacing: "0.04em" }}>NAVĀTMĀ</span>
@@ -235,30 +235,31 @@ export default function App() {
       <section className="relative flex flex-col items-center justify-center text-center overflow-hidden" style={{ padding: "9rem 1.5rem 5rem", background: "linear-gradient(180deg, #2C1810 0%, #231510 50%, #1E120B 100%)" }}>
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 40%, rgba(212,168,83,0.06), transparent 65%)" }} />
 
-
-        <Reveal><Lotus size={64} className="mx-auto mb-5 opacity-80" animated /></Reveal>
-        <Reveal delay={0.12}>
-          <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 300, color: "#FBF7F0", letterSpacing: "0.06em" }}>
-            NAV<span style={{ color: "#D4A853", fontWeight: 500 }}>Ā</span>TM<span style={{ color: "#D4A853", fontWeight: 500 }}>Ā</span>
-          </h1>
-        </Reveal>
-        <Reveal delay={0.25}><div className="mt-4"><Divider width="w-14" /></div></Reveal>
-        <Reveal delay={0.35}>
-          <p className="mt-5" style={{ fontSize: "0.72rem", letterSpacing: "0.35em", textTransform: "uppercase" as const, color: "#D4A853", fontWeight: 600 }}>
-            Preserving Wisdom. Inspiring Generations.
-          </p>
-        </Reveal>
-        <Reveal delay={0.5}>
-          <p className="mt-4" style={{ fontSize: "0.88rem", color: "#F5EDE0", opacity: 0.4, maxWidth: 420, lineHeight: 1.7, fontWeight: 300 }}>
-            A not-for-profit institution dedicated to education, Indian Knowledge Systems, and spiritual heritage.
-          </p>
-        </Reveal>
+        <div style={{ width: "100%", maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
+          <Reveal><Lotus size={64} className="mx-auto mb-5 opacity-80" animated /></Reveal>
+          <Reveal delay={0.12}>
+            <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.2rem, 5vw, 3.5rem)", fontWeight: 300, color: "#FBF7F0", letterSpacing: "0.06em" }}>
+              NAV<span style={{ color: "#D4A853", fontWeight: 500 }}>Ā</span>TM<span style={{ color: "#D4A853", fontWeight: 500 }}>Ā</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={0.25}><div className="mt-4"><Divider width="w-14" /></div></Reveal>
+          <Reveal delay={0.35}>
+            <p className="mt-5" style={{ fontSize: "0.72rem", letterSpacing: "0.35em", textTransform: "uppercase" as const, color: "#D4A853", fontWeight: 600 }}>
+              Preserving Wisdom. Inspiring Generations.
+            </p>
+          </Reveal>
+          <Reveal delay={0.5}>
+            <p className="mt-4" style={{ fontSize: "0.88rem", color: "#F5EDE0", opacity: 0.4, maxWidth: 420, lineHeight: 1.7, fontWeight: 300, margin: "0 auto" }}>
+              A not-for-profit institution dedicated to education, Indian Knowledge Systems, and spiritual heritage.
+            </p>
+          </Reveal>
+        </div>
       </section>
 
       {/* ═══ ABOUT ═══ */}
       <section id="about" style={{ padding: "5.5rem 1.5rem", background: "#FFFCF7", position: "relative" }}>
         <div className="absolute top-0 left-0 w-full h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(212,168,83,0.2), transparent)" }} />
-        <div className="max-w-3xl mx-auto">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
           <Reveal className="text-center">
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase" as const, color: "#C4724E", fontWeight: 700, marginBottom: "0.7rem" }}>Who We Are</p>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 400, color: "#2C1810", lineHeight: 1.3 }}>
@@ -282,7 +283,7 @@ export default function App() {
       {/* ═══ ACTIVITIES ═══ */}
       <section id="activities" className="relative" style={{ padding: "5.5rem 1.5rem", background: "#1E120B" }}>
         <div className="absolute inset-0 opacity-3" style={{ backgroundImage: "radial-gradient(circle, #D4A853 0.5px, transparent 0.5px)", backgroundSize: "40px 40px" }} />
-        <div className="max-w-5xl mx-auto relative z-10">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", position: "relative", zIndex: 10 }}>
           <Reveal className="text-center mb-12">
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase" as const, color: "#F0D48A", fontWeight: 700, marginBottom: "0.7rem" }}>What We Do</p>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 400, color: "#FBF7F0" }}>
@@ -291,7 +292,7 @@ export default function App() {
             <div className="mt-3"><Divider /></div>
           </Reveal>
           {/* Activities Grid */}
-          <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "1rem", justifyContent: "center" }}>
             {activities.map((item, i) => {
               const Icon = item.icon;
               return (
@@ -322,7 +323,7 @@ export default function App() {
         <div className="absolute top-6 left-6 opacity-5"><Lotus size={120} /></div>
         <div className="absolute bottom-6 right-6 opacity-5" style={{ transform: "rotate(180deg)" }}><Lotus size={100} /></div>
 
-        <div className="max-w-3xl mx-auto text-center relative z-10">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", textAlign: "center", position: "relative", zIndex: 10 }}>
           <Reveal>
             <Quote size={32} style={{ color: "rgba(240,212,138,0.25)", margin: "0 auto 1.2rem" }} />
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase" as const, color: "#F0D48A", fontWeight: 700, marginBottom: "1.8rem" }}>
@@ -346,7 +347,7 @@ export default function App() {
 
       {/* ═══ VISION & MISSION ═══ */}
       <section id="vision" style={{ padding: "5.5rem 1.5rem", background: "#FFFCF7" }}>
-        <div className="max-w-5xl mx-auto">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
           <Reveal className="text-center mb-12">
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase" as const, color: "#C4724E", fontWeight: 700, marginBottom: "0.7rem" }}>Our Purpose</p>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 400, color: "#2C1810" }}>
@@ -354,7 +355,7 @@ export default function App() {
             </h2>
             <div className="mt-3"><Divider /></div>
           </Reveal>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", justifyContent: "center" }}>
             <Reveal>
               <div className="rounded-2xl p-6 md:p-8 h-full relative overflow-hidden" style={{ background: "#2C1810", border: "1px solid rgba(212,168,83,0.1)" }}>
                 <div className="absolute top-0 right-0 w-32 h-32 opacity-5"><Lotus size={130} /></div>
@@ -389,7 +390,7 @@ export default function App() {
 
       {/* ═══ CONTACT ═══ */}
       <section id="contact" className="relative" style={{ padding: "5.5rem 1.5rem", background: "#1E120B" }}>
-        <div className="max-w-5xl mx-auto">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
           <Reveal className="text-center mb-12">
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase" as const, color: "#F0D48A", fontWeight: 700, marginBottom: "0.7rem" }}>Reach Out</p>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 400, color: "#FBF7F0" }}>
@@ -397,7 +398,7 @@ export default function App() {
             </h2>
             <div className="mt-3"><Divider /></div>
           </Reveal>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", justifyContent: "center" }}>
             <Reveal>
               <div className="rounded-2xl p-5 md:p-6 h-full" style={{ border: "1px solid rgba(212,168,83,0.08)", background: "rgba(255,255,255,0.015)" }}>
                 <div className="flex items-center gap-3 mb-4">
@@ -447,7 +448,7 @@ export default function App() {
 
       {/* ═══ FOOTER ═══ */}
       <footer style={{ background: "#150D07", borderTop: "1px solid rgba(212,168,83,0.04)", padding: "2.5rem 1.5rem 1.8rem" }}>
-        <div className="max-w-5xl mx-auto text-center">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem", textAlign: "center" }}>
           <Lotus size={28} className="mx-auto mb-3 opacity-30" />
           <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1rem", color: "#D4A853", fontWeight: 500, letterSpacing: "0.04em", marginBottom: "0.7rem" }}>NAVĀTMĀ</p>
           <p style={{ fontSize: "0.78rem", lineHeight: 1.7, color: "#F5EDE0", opacity: 0.28, maxWidth: 480, margin: "0 auto 1.2rem" }}>
