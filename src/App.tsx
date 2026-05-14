@@ -346,44 +346,87 @@ export default function App() {
       </section>
 
       {/* ═══ VISION & MISSION ═══ */}
-      <section id="vision" style={{ padding: "5.5rem 1.5rem", background: "#FFFCF7" }}>
+      <section id="vision" style={{ padding: "6rem 1.5rem 7rem", background: "#FFFCF7" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1.5rem" }}>
-          <Reveal className="text-center mb-12">
+          <Reveal className="text-center mb-16">
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase" as const, color: "#C4724E", fontWeight: 700, marginBottom: "0.7rem" }}>Our Purpose</p>
             <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: 400, color: "#2C1810" }}>
               Vision <em style={{ color: "#C4724E", fontStyle: "italic" }}>&</em> Mission
             </h2>
             <div className="mt-3"><Divider /></div>
           </Reveal>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", justifyContent: "center" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem", justifyContent: "center" }}>
+
+            {/* Vision Card */}
             <Reveal>
-              <div className="rounded-2xl p-6 md:p-8 h-full relative overflow-hidden" style={{ background: "#2C1810", border: "1px solid rgba(212,168,83,0.1)" }}>
-                <div className="absolute top-0 right-0 w-32 h-32 opacity-5"><Lotus size={130} /></div>
-                <div className="flex items-center gap-3 mb-5 relative z-10">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #D4A853, #F0D48A)" }}>
-                    <Eye size={19} style={{ color: "#2C1810" }} />
+              <div
+                className="rounded-2xl h-full relative overflow-hidden transition-all duration-300 cursor-default"
+                style={{
+                  background: "radial-gradient(ellipse at top left, rgba(212,168,83,0.08) 0%, rgba(44,24,16,0.98) 60%), #2C1810",
+                  border: "1px solid rgba(212,168,83,0.12)",
+                  borderTop: "3px solid #D4A853",
+                  padding: "2.5rem 2rem 2rem",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.boxShadow = "0 12px 40px rgba(212,168,83,0.15)";
+                  e.currentTarget.style.borderTopColor = "#F0D48A";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.05)";
+                  e.currentTarget.style.borderTopColor = "#D4A853";
+                }}
+              >
+                <div className="absolute top-0 right-0 w-40 h-40 opacity-[0.04]"><Lotus size={160} /></div>
+                <div className="flex items-center gap-4 mb-6 relative z-10">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style={{ background: "linear-gradient(135deg, #D4A853, #F0D48A)" }}>
+                    <Eye size={24} style={{ color: "#2C1810" }} />
                   </div>
-                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.45rem", fontWeight: 600, color: "#FBF7F0" }}>Vision</h3>
+                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.6rem", fontWeight: 600, color: "#FBF7F0" }}>Vision</h3>
                 </div>
-                <p className="relative z-10" style={{ fontSize: "1rem", lineHeight: 1.9, color: "#F5EDE0", opacity: 0.7, wordBreak: "break-word" }}>
+                <p className="relative z-10" style={{ fontSize: "1.05rem", lineHeight: 1.9, color: "#F5EDE0", opacity: 0.75 }}>
                   To preserve and promote the timeless wisdom of Indian traditions and knowledge systems while fostering education, ethical values, and holistic societal development.
                 </p>
               </div>
             </Reveal>
+
+            {/* Mission Card */}
             <Reveal delay={0.15}>
-              <div className="rounded-2xl p-6 md:p-8 h-full relative overflow-hidden" style={{ background: "#2C1810", border: "1px solid rgba(212,168,83,0.1)" }}>
-                <div className="absolute top-0 right-0 w-32 h-32 opacity-5" style={{ transform: "rotate(45deg)" }}><Lotus size={130} /></div>
-                <div className="flex items-center gap-3 mb-5 relative z-10">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #7A8B6F, #4A5D3E)" }}>
-                    <Target size={19} style={{ color: "#FBF7F0" }} />
+              <div
+                className="rounded-2xl h-full relative overflow-hidden transition-all duration-300 cursor-default"
+                style={{
+                  background: "radial-gradient(ellipse at top left, rgba(122,139,111,0.1) 0%, rgba(44,24,16,0.98) 60%), #2C1810",
+                  border: "1px solid rgba(122,139,111,0.15)",
+                  borderTop: "3px solid #7A8B6F",
+                  padding: "2.5rem 2rem 2rem",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.boxShadow = "0 12px 40px rgba(122,139,111,0.2)";
+                  e.currentTarget.style.borderTopColor = "#9AAB8D";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.05)";
+                  e.currentTarget.style.borderTopColor = "#7A8B6F";
+                }}
+              >
+                <div className="absolute top-0 right-0 w-40 h-40 opacity-[0.04]" style={{ transform: "rotate(15deg)" }}><Lotus size={160} /></div>
+                <div className="flex items-center gap-4 mb-6 relative z-10">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style={{ background: "linear-gradient(135deg, #7A8B6F, #4A5D3E)" }}>
+                    <Target size={24} style={{ color: "#FBF7F0" }} />
                   </div>
-                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.45rem", fontWeight: 600, color: "#FBF7F0" }}>Mission</h3>
+                  <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.6rem", fontWeight: 600, color: "#FBF7F0" }}>Mission</h3>
                 </div>
-                <p className="relative z-10" style={{ fontSize: "1rem", lineHeight: 1.9, color: "#F5EDE0", opacity: 0.7, wordBreak: "break-word" }}>
+                <p className="relative z-10" style={{ fontSize: "1.05rem", lineHeight: 1.9, color: "#F5EDE0", opacity: 0.75 }}>
                   To establish and support educational, cultural, spiritual, and research initiatives that integrate traditional wisdom with contemporary learning and contribute to national and societal well-being.
                 </p>
               </div>
             </Reveal>
+
           </div>
         </div>
       </section>
