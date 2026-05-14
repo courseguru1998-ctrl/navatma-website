@@ -290,12 +290,13 @@ export default function App() {
             </h2>
             <div className="mt-3"><Divider /></div>
           </Reveal>
+          {/* Activities Grid */}
           <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}>
             {activities.map((item, i) => {
               const Icon = item.icon;
               return (
                 <Reveal key={i} delay={i * 0.07}>
-                  <div className="rounded-2xl transition-all cursor-default" style={{ padding: "1.8rem", border: "1px solid rgba(212,168,83,0.08)", background: "rgba(255,255,255,0.015)" }}
+                  <div className="rounded-2xl transition-all cursor-default h-full" style={{ padding: "1.5rem", border: "1px solid rgba(212,168,83,0.08)", background: "rgba(255,255,255,0.015)" }}
                     onMouseEnter={(e) => { e.currentTarget.style.borderColor = `${item.accent}50`; e.currentTarget.style.background = `${item.accent}08`; e.currentTarget.style.transform = "translateY(-3px)"; }}
                     onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(212,168,83,0.08)"; e.currentTarget.style.background = "rgba(255,255,255,0.015)"; e.currentTarget.style.transform = "translateY(0)"; }}
                   >
@@ -303,7 +304,7 @@ export default function App() {
                       <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: `${item.accent}18` }}>
                         <Icon size={20} style={{ color: item.accent }} />
                       </div>
-                      <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.12rem", fontWeight: 500, color: "#F5EDE0", lineHeight: 1.5, paddingTop: "0.15rem" }}>
+                      <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.05rem", fontWeight: 500, color: "#F5EDE0", lineHeight: 1.5, paddingTop: "0.15rem" }}>
                         {item.title}
                       </p>
                     </div>
@@ -355,7 +356,7 @@ export default function App() {
           </Reveal>
           <div className="grid md:grid-cols-2 gap-6">
             <Reveal>
-              <div className="rounded-2xl p-8 h-full relative overflow-hidden" style={{ background: "#2C1810", border: "1px solid rgba(212,168,83,0.1)" }}>
+              <div className="rounded-2xl p-6 md:p-8 h-full relative overflow-hidden" style={{ background: "#2C1810", border: "1px solid rgba(212,168,83,0.1)" }}>
                 <div className="absolute top-0 right-0 w-32 h-32 opacity-5"><Lotus size={130} /></div>
                 <div className="flex items-center gap-3 mb-5 relative z-10">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #D4A853, #F0D48A)" }}>
@@ -363,13 +364,13 @@ export default function App() {
                   </div>
                   <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.45rem", fontWeight: 600, color: "#FBF7F0" }}>Vision</h3>
                 </div>
-                <p className="relative z-10" style={{ fontSize: "1rem", lineHeight: 1.95, color: "#F5EDE0", opacity: 0.7 }}>
+                <p className="relative z-10" style={{ fontSize: "1rem", lineHeight: 1.9, color: "#F5EDE0", opacity: 0.7, wordBreak: "break-word" }}>
                   To preserve and promote the timeless wisdom of Indian traditions and knowledge systems while fostering education, ethical values, and holistic societal development.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={0.15}>
-              <div className="rounded-2xl p-8 h-full relative overflow-hidden" style={{ background: "#2C1810", border: "1px solid rgba(212,168,83,0.1)" }}>
+              <div className="rounded-2xl p-6 md:p-8 h-full relative overflow-hidden" style={{ background: "#2C1810", border: "1px solid rgba(212,168,83,0.1)" }}>
                 <div className="absolute top-0 right-0 w-32 h-32 opacity-5" style={{ transform: "rotate(45deg)" }}><Lotus size={130} /></div>
                 <div className="flex items-center gap-3 mb-5 relative z-10">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #7A8B6F, #4A5D3E)" }}>
@@ -377,7 +378,7 @@ export default function App() {
                   </div>
                   <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.45rem", fontWeight: 600, color: "#FBF7F0" }}>Mission</h3>
                 </div>
-                <p className="relative z-10" style={{ fontSize: "1rem", lineHeight: 1.95, color: "#F5EDE0", opacity: 0.7 }}>
+                <p className="relative z-10" style={{ fontSize: "1rem", lineHeight: 1.9, color: "#F5EDE0", opacity: 0.7, wordBreak: "break-word" }}>
                   To establish and support educational, cultural, spiritual, and research initiatives that integrate traditional wisdom with contemporary learning and contribute to national and societal well-being.
                 </p>
               </div>
@@ -398,14 +399,14 @@ export default function App() {
           </Reveal>
           <div className="grid md:grid-cols-2 gap-6">
             <Reveal>
-              <div className="rounded-2xl p-7 h-full" style={{ border: "1px solid rgba(212,168,83,0.08)", background: "rgba(255,255,255,0.015)" }}>
-                <div className="flex items-center gap-3 mb-5">
+              <div className="rounded-2xl p-5 md:p-6 h-full" style={{ border: "1px solid rgba(212,168,83,0.08)", background: "rgba(255,255,255,0.015)" }}>
+                <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(212,168,83,0.1)" }}>
                     <MapPin size={17} style={{ color: "#D4A853" }} />
                   </div>
                   <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.2rem", fontWeight: 600, color: "#FBF7F0" }}>Address</h3>
                 </div>
-                <p style={{ fontSize: "0.92rem", lineHeight: 2, color: "#F5EDE0", opacity: 0.55 }}>
+                <p style={{ fontSize: "0.9rem", lineHeight: 1.9, color: "#F5EDE0", opacity: 0.55, wordBreak: "break-word" }}>
                   NAVĀTMĀ<br />
                   No. 2, Arundhati Gurukulam,<br />
                   Raghavasadanam, Pampa Mahakavi Road,<br />
@@ -416,26 +417,26 @@ export default function App() {
               </div>
             </Reveal>
             <Reveal delay={0.12}>
-              <div className="rounded-2xl p-7 h-full" style={{ border: "1px solid rgba(212,168,83,0.08)", background: "rgba(255,255,255,0.015)" }}>
-                <div className="flex items-center gap-3 mb-5">
+              <div className="rounded-2xl p-5 md:p-6 h-full" style={{ border: "1px solid rgba(212,168,83,0.08)", background: "rgba(255,255,255,0.015)" }}>
+                <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ background: "rgba(212,168,83,0.1)" }}>
                     <Mail size={17} style={{ color: "#D4A853" }} />
                   </div>
                   <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.2rem", fontWeight: 600, color: "#FBF7F0" }}>Get in Touch</h3>
                 </div>
-                <div className="flex flex-col gap-3.5">
+                <div className="flex flex-col gap-3">
                   {emails.map((item, i) => (
                     <div key={i}>
-                      <a href={`mailto:${item.email}`} style={{ color: "#F0D48A", fontSize: "0.88rem", textDecoration: "none", transition: "opacity 0.3s" }}
+                      <a href={`mailto:${item.email}`} style={{ color: "#F0D48A", fontSize: "0.85rem", textDecoration: "none", transition: "opacity 0.3s", wordBreak: "break-all" }}
                         onMouseEnter={(e) => e.currentTarget.style.opacity = "0.7"}
                         onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}
                       >{item.email}</a>
-                      <p style={{ fontSize: "0.68rem", color: "#F5EDE0", opacity: 0.3, letterSpacing: "0.1em", textTransform: "uppercase" as const, marginTop: "2px" }}>{item.label}</p>
+                      <p style={{ fontSize: "0.65rem", color: "#F5EDE0", opacity: 0.3, letterSpacing: "0.08em", textTransform: "uppercase" as const, marginTop: "2px" }}>{item.label}</p>
                     </div>
                   ))}
                   <div className="flex items-center gap-2 mt-1" style={{ color: "#F5EDE0", opacity: 0.4 }}>
                     <Phone size={13} />
-                    <span style={{ fontSize: "0.88rem" }}>+91-XXXXXXXXXX</span>
+                    <span style={{ fontSize: "0.85rem" }}>+91-XXXXXXXXXX</span>
                   </div>
                 </div>
               </div>
